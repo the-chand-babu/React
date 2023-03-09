@@ -1,0 +1,13 @@
+.App{
+  /* border: 2px solid black; */
+  height: 100vh;
+  width:100%;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+display: flex;
+/* justify-content: space-between; */
+background-color: #df55f2;
+gap: 100px;
+align-items: center;
+justify-content: center;
+}
+

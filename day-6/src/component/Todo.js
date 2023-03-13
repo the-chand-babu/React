@@ -1,17 +1,18 @@
 import './Todo.css' 
 
-import {useState,useRef} from 'react'
+import {useState} from 'react'
+
 
 const Todo=()=>{
 
     const [todo, setTodo]= useState([])
     const [count,setCount]= useState(0);
-    const referenceS=useRef(null);
+    
     
 
-    let value ='';
+    let value ={};
     const handelinputChange=(e)=>{
-            value = e.target.value;
+            value.name = e.target.value;
             
     }
 
@@ -20,32 +21,46 @@ const Todo=()=>{
             alert("please fill the input")
         }else{
             setCount(count+1);
-            setTodo([...todo,value])
+            setTodo([...todo,value ])
         }
+        console.log(todo)
 
        
     }
 
-
     const deleteTodo=(index)=>{
             todo.splice(index,1);
             setTodo(todo);
-            if(count !== 0){
+        
             setCount(count-1);
 
-            }
+        
+
+            
 
     }
 
    
             
-    const handelCompltetbtn=()=>{
-        referenceS.current.className='strike'
-        // console.log(referenceS.current)
-        if(count !== 0){
-        setCount(count-1)
+    const handelCompltetbtn=(index)=>{
+        
+       
+        const arr = todo.map((ele,inde)=>{
+                if(inde=== index){
+                    console.log(ele)
+                    return {...ele,flag:true};
+                }
+                else{
+                    return ele;
+                }
+        })
+        setTodo(arr)
+    
+    setCount(count-1)
 
-        }
+   
+
+        
     }
 
 return (
@@ -55,14 +70,19 @@ return (
 
         {todo.map((item,index)=>{
             return (
-           <ul className='list'  key={index   }>
-            
                 
-             <li ref={referenceS}>{item}</li>
+           <ul className='list'  key={index   }>
+            {
+                item.flag?<li style={{textDecoration: 'line-through'}}>{item.name}</li>:<li >{item.name}</li>
+                // console.log(item.flag)
+            }
+            
+                {console.log(item.flag)}
+             
         
         
             <div className='btn-div'>
-            <button onClick={handelCompltetbtn} className='complete-btn'>complete</button>
+            <button onClick={()=> handelCompltetbtn(index)} className='complete-btn'>complete</button>
             <button onClick={()=>deleteTodo(index)} className='delete-btn'>x</button>
             </div>
            

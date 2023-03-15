@@ -1,0 +1,29 @@
+
+.div{
+    border: 1px solid red;
+    width: 40%;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    height: 200px;
+    /* text-align: center; */
+}
+
+.img-div{
+    width: 50%;
+    border: 1px solid black;
+    
+}
+.img-div img{
+    width: 100%;
+    height: 100%;
+}
+
+.btn-div{
+    /* text-align: center; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 70px;
+
+}

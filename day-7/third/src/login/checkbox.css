@@ -1,0 +1,24 @@
+
+.checkbox{
+        display: flex;
+        /* border: 1px solid red; */
+        justify-content: space-between;
+}
+
+.checkbox input{
+    position: absolute;
+    margin-top: 10px;
+    width: 10px;
+}
+.remember{
+    position: relative;
+    bottom: 1px;
+    left: 20px;
+    font-size: 10px;
+
+}
+
+.forgot{
+    font-size: 10px;
+    margin-right: 20px;
+}

@@ -13,6 +13,7 @@ const Todo=()=>{
     let value ={};
     const handelinputChange=(e)=>{
             value.name = e.target.value;
+            value.flag=false;
             
     }
 
@@ -29,10 +30,22 @@ const Todo=()=>{
     }
 
     const deleteTodo=(index)=>{
+        if(todo[index].flag===true){
+            console.log(todo[index].flag)
+            todo.splice(index,1);
+            console.log([...todo])
+            setTodo([...todo]);
+            
+           
+        }else{
+
             todo.splice(index,1);
             setTodo(todo);
-        
-            setCount(count-1);
+            setCount(count-1)
+
+        }
+
+           
 
         
 

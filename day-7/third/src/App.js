@@ -1,39 +1,41 @@
 // import logo from './logo.svg';
 import './App.css';
+import {useState} from 'react'
 
 
-import {Heading} from './login/heading'
-import{Input} from './login/input'
-import {Checkbox} from './login/checkbox'
-import {Button} from './login/button'
+
+
+import {Signup} from './component/signup'
+import { Login } from './component/login';
 
 function App() {
+
+  const handelClick=()=>{
+    if(showpage){
+      setShowpage(null);
+    setText('login')
+    return;
+
+    }
+    setShowpage(true);
+    setText('Signup')
+  }
+
+  const [showpage, setShowpage]=useState(null);
+  const [text ,setText]= useState("login");
   return (
     
     <div className="App">
-      
-      <div className='signup'>
-      <Heading name="Signup in your account" />
-      <Input type="text" name="FirstName" placeholder ="enter your FirstName"/>
-      <Input type="text" name="LastName" placeholder ="enter your LastName"/>
-      <Input type ='email' name="Email" placeholder ="enter your Email"/>
-      <Input type ='password' name="Password" placeholder ="enter your Password"/>
-
-      <Checkbox/>
-      <Button name="Login"/>
-
-      </div>
-      
-      <div className='login'>
-      <Heading name = 'Log in your account'/>
-      <Input name="Your Email" placeholder ="enter your Email"/>
-      <Input name="Password" placeholder ="enter your Password"/>
-      <Checkbox/>
-      <Button name="Login"/>
-
-      </div>
-
-
+      {
+        showpage?<div>
+            <Login/>
+            
+        </div>:
+        <Signup/>
+      }
+      {/* <Signup/> */}
+      <span className='span'>signing here <button onClick={handelClick}>{text}</button></span>
+      {/* <Login/> */}
     </div>
     
     

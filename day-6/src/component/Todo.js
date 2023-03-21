@@ -63,9 +63,9 @@ const Todo=()=>{
                     console.log(ele)
                     return {...ele,flag:true};
                 }
-                else{
+            
                     return ele;
-                }
+                
         })
         setTodo(arr)
     

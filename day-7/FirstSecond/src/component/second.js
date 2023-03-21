@@ -7,7 +7,7 @@ const Second =()=>{
     const handelChange=(e)=>{
        value= e.target.value
     //    console.log(value.length)
-       if(value.length == 100){
+       if(value.length === 100){
         alert("Your crossed the limit");
         e.target.value=null;
        }

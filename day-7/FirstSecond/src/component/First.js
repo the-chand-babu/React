@@ -15,7 +15,7 @@ const First =()=>{
 
 
     const handelChange=()=>{
-        if(count == arr.length-1){
+        if(count === arr.length-1){
             setCount(0);
             return;
         }

@@ -1,0 +1,11 @@
+
+.board-container{
+    /* border: 1px solid black; */
+    margin: auto;
+   
+}
+.board-row{
+    display: flex;
+    /* gap: 18px; */
+    /* margin-bottom: 20px; */
+}

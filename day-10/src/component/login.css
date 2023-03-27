@@ -1,0 +1,47 @@
+
+.login-div{
+    /* border: 1px solid red; */
+    width: 25%;
+    height: 150px;
+    margin: auto;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgb(205, 182, 227);
+    border-radius: 20px;
+}
+
+.login-div input{
+    width: 95%;
+    margin-top: 20px;
+    
+}
+
+.register-link-div{
+    /* border: 1px solid red; */
+    margin-top: -10px;
+}
+.register-link-div>p{
+    font-size: 10px;
+    margin-bottom: -30px;
+}
+.register-link{
+    font-size: 10px;
+    text-decoration: none;
+    margin-top: -10px;
+    margin-left: 70px;
+}
+
+.box-button-div{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.box-button-div>button{
+    width: 100px;
+    margin-right: 8px;
+    height: 30px;
+    background-color: rgb(85, 85, 139);
+    color: white;
+    border: none;
+    border-radius: 10px;
+}

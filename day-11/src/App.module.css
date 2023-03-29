@@ -1,0 +1,14 @@
+
+.App{
+    /* border: 1px solid red; */
+    width: 30%;
+    margin: auto;
+    padding-left: 20px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    padding-top: 20px;
+}
+

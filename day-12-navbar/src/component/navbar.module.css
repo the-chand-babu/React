@@ -1,0 +1,30 @@
+
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+    /* border: 1px solid #ff0000; */
+    align-items: center;
+    padding-left: 10px;
+    background-color: azure;
+}
+
+.navbar img{
+    width: 100px;
+    height: 20px;
+}
+
+
+.navList{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+
+.link{
+    text-decoration: none;
+    color: rgb(66, 66, 124);
+}
+

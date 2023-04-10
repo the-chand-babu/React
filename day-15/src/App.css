@@ -1,0 +1,27 @@
+
+.App{
+  width: 30%;
+  margin: auto;
+  text-align: center;
+
+
+}
+.App h1{
+  color: red;
+
+}
+
+.App ul{
+  list-style: none;
+  color: green;
+}
+
+.App button{
+  width: 20%;
+  margin-left: 40px;
+  color: white;
+  background-color: green;
+  border: none;
+  padding: 10px 20px ;
+  /* text-align: center; */
+}
